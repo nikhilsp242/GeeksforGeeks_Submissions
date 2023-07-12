@@ -19,7 +19,7 @@ class Solution{
             return 1;
         long long result = 1;
         long long base = N;
-        while(R>0){
+        while(R>0){                                      //O(logR)      
             if(R%2==1)
                 result = (result * base) % mod;
             base = (base * base) % mod;
