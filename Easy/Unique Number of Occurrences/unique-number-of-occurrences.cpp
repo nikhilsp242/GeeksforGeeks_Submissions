@@ -29,12 +29,6 @@ class Solution
             }
         }
         freqArr.push_back(freq);
-        /*sort(freqArr.begin(),freqArr.end());
-        for(int i = 1;i<freqArr.size();i++){
-            if(freqArr[i] == freqArr[i-1])
-                return false;
-        }
-        return true;*/
         set<int> uniqueFreq(freqArr.begin(),freqArr.end());
         return uniqueFreq.size() == freqArr.size();
     }
