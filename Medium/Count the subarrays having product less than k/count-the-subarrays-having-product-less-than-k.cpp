@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
+                                                                                                //HAS PASSED ALL THE TEST CASES  (1122 / 1122)
 
 // } Driver Code Ends
 
@@ -11,9 +11,10 @@ class Solution{
   public:
     long long countSubArrayProductLessThanK(const vector<int>& a, int n, long long k) {
         //code here
+//---------------------------------------------------------------------------------------------------------------------------------------
         /*
         long long num = 0;
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++){                                                             //passed (1120 / 1122)
             if(a[i]<k){
                 int j = i;
                 long long prod = 1;
@@ -27,11 +28,12 @@ class Solution{
             }
         }
         return num;*/
+//---------------------------------------------------------------------------------------------------------------------------------------
 /*
         long long num = 0 ;
         long long prod = a[0];
         int i = 0,j = 0;
-        while(i<n){
+        while(i<n){                                                                            //passed (1120 / 1122)
             if(prod<k && j<n){
                 num++;
                 prod *= a[++j];
@@ -44,12 +46,13 @@ class Solution{
                 
         }
         return num;*/
+//---------------------------------------------------------------------------------------------------------------------------------------
         
         long long num = 0;
         long long prod = 1;
         int i = 0, j = 0;
 
-        while (i < n && j < n) {
+        while (i < n && j < n) {                                                              //passed (1122 / 1122)
             if (prod * a[j] < k) {
                 prod *= a[j];
                 num += j - i + 1;
@@ -67,6 +70,7 @@ class Solution{
 
 
         return num;
+//---------------------------------------------------------------------------------------------------------------------------------------
 
     }
 };
