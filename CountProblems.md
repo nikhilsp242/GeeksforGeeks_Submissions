@@ -1,4 +1,5 @@
-# This is an Auto-update file!!> The contents in this file are automatically updated as soon as contents pushed to this repository !!
+# This is an Auto-update file!!
+> The contents in this file are automatically updated as soon as contents pushed to this repository !!
 * Basic problems : 3
 * Easy problems : 5
 * Hard problems : 2
