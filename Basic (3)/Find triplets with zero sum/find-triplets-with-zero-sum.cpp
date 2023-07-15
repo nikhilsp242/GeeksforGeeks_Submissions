@@ -7,7 +7,7 @@ using namespace std;
 // } Driver Code Ends
 /* You are required to complete the function below
 *  arr[]: input array
-*  n: size of array
+*  n: size of array  
 */
 
 void bubbleSort(int arr[], int n) {
