@@ -21,7 +21,6 @@ void bubbleSort(int arr[], int n) {
 	}
 }
 
-
 class Solution{
   public:
     //Function to find triplets with zero sum.
