@@ -13,15 +13,28 @@ class Solution
     void deleteMid(stack<int>&s, int sizeOfStack)
     {
         // code here..
+/* -----------------------------------------------------------------------------------------------------------------------------------------------
+         int middleIndex = (sizeOfStack)/2;
+        vector<int> vec;
+        while(!s.empty()){                                                            // passed (1120/1120)
+            vec.push_back(s.top());                                                   // Total time taken  = 0.1s
+            s.pop();
+        }
+        vec.erase(vec.begin()+middleIndex);
+        for(int i = vec.size()-1;i>=0;i--){
+            s.push(vec[i]);
+        }
+  ------------------------------------------------------------------------------------------------------------------------------------------------ */      
         int middleIndex = 0 ;
         vector<int> vec;
-        while(middleIndex <= (sizeOfStack)/2){
-            vec.push_back(s.top());
+        while(middleIndex <= (sizeOfStack)/2){                                          //passed (1120/1120)
+            vec.push_back(s.top());                                                     // Total time taken = 0.09s
             s.pop();
             middleIndex++;
         }
         for(int i = vec.size()-2;i>=0;i--){
             s.push(vec[i]);
+ //-------------------------------------------------------------------------------------------------------------------------------------------------
         }
     }
 };
