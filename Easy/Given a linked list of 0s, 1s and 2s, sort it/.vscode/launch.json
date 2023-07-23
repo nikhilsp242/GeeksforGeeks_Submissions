@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/nikhil/PESU/HOME/Cpp/GeeksforGeeks_Submissions/Easy/Given a linked list of 0s, 1s and 2s, sort it",
+      "program": "c:/Users/nikhil/PESU/HOME/Cpp/GeeksforGeeks_Submissions/Easy/Given a linked list of 0s, 1s and 2s, sort it/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

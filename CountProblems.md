@@ -1,9 +1,9 @@
 # This is an Auto-Update file !!
 > The contents in this file are automatically updated as soon as contents are pushed to this repository !!
 * Basic Problems : 4
-* Easy Problems : 7
+* Easy Problems : 8
 * Hard Problems : 3
 * Medium Problems : 12
 * School Problems : 8
 
-### Total Number of Problems: 34
+### Total Number of Problems: 35
