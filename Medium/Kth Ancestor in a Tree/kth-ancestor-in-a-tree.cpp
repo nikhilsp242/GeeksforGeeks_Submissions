@@ -113,6 +113,7 @@ struct Node
 // your task is to complete this function
 stack<Node*> st;
 
+//helper function
 bool find(Node* root, int target, vector<int>& parents){
     if(!root) return false;
     parents.push_back(root->data);
@@ -138,7 +139,8 @@ int kthAncestor(Node *root, int k, int node)
     return parents[n-k-1];
     
     return -1;
-    /*
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // Another approach with using helper function
     if(root==nullptr) return -1;
 
     if(root->data==node){
@@ -163,5 +165,5 @@ int kthAncestor(Node *root, int k, int node)
     
     st.pop(); // Backtrack and remove the current node from the stack
     return -1;
-    */
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 }
