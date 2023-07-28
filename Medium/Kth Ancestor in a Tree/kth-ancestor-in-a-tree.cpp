@@ -111,36 +111,25 @@ struct Node
 };
 */
 // your task is to complete this function
-stack<Node*> st;
 
-//helper function
-bool find(Node* root, int target, vector<int>& parents){
+//helper function - 1
+/*-----------------------------------------------------------------------------------------------------------------------------
+bool find(Node* root, int target, vector<int>& path){                  //Total time taken = 0.32s
     if(!root) return false;
-    parents.push_back(root->data);
+    path.push_back(root->data);
     
     if(root->data==target) return true;
     
-    if( find(root->left,target,parents) || find(root->right,target,parents))
+    if( find(root->left,target,path) || find(root->right,target,path))
         return true;
         
-    parents.pop_back();
+    path.pop_back();
     
     return false;
 }
-
-int kthAncestor(Node *root, int k, int node)
-{
-    // Code here
-    vector<int> parents;
-    find(root, node, parents);
-    
-    int n=parents.size();
-    if(n>k)
-    return parents[n-k-1];
-    
-    return -1;
-    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    // Another approach with using helper function
+-----------------------------------------------------------------------------------------------------------------------------*/
+//helper function - 2
+int search(Node *root,int k,int node,stack<Node*>& st){               //Total time taken = 0.32s
     if(root==nullptr) return -1;
 
     if(root->data==node){
@@ -156,14 +145,36 @@ int kthAncestor(Node *root, int k, int node)
     if(root->left==nullptr && root->right==nullptr) return -1;
     else st.push(root);
     
-    
-    int leftPath = kthAncestor(root->left,k,node);
+    int leftPath = search(root->left,k,node,st);
     if(leftPath!=-1) return leftPath;
     
-    int rightPath = kthAncestor(root->right,k,node);
+    int rightPath = search(root->right,k,node,st);
     if(rightPath!=-1) return rightPath;
     
     st.pop(); // Backtrack and remove the current node from the stack
     return -1;
-    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------
+
+int kthAncestor(Node *root, int k, int node)
+{
+    // Code here
+    //-------------------------------------------------------------------------------------------------------------------------
+    /*
+    vector<int> path;                                       //Method - 1 , using helper function - 1.
+    find(root, node, path);
+    
+    int n=path.size();
+    if(n>k)
+    return path[n-k-1];
+    
+    return -1;
+    */
+    //-------------------------------------------------------------------------------------------------------------------------
+    stack<Node*> st;                                        //Method - 2 , using helper function - 2.   
+    int ancestor = search(root,k,node,st); 
+    return ancestor;
+    //-------------------------------------------------------------------------------------------------------------------------
+    
 }
