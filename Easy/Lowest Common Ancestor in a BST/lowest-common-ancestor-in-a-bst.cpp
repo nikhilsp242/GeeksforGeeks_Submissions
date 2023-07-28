@@ -20,8 +20,10 @@ struct Node {
 class Solution{
     public:
     
+        /*
+        //-----------------------------------------------------------------------------------------------------
         //helper function to search the nodes
-        Node* search(Node* root, int target, vector<Node*>& path) {
+        Node* search(Node* root, int target, vector<Node*>& path) {       // O(n) , n -> number of nodes
             if (root == nullptr) return nullptr;
         
             if (root->data == target) {
@@ -59,6 +61,18 @@ class Solution{
         
             return lca;
         }
+        */
+        //-----------------------------------------------------------------------------------------------------
+        //better approach 
+        Node* LCA(Node *root, int n1, int n2)                     // O(h)  , h -> height of the tree
+        {
+            // code here
+            if(!root) return NULL;
+            if(root->data < n1 && root->data < n2) return LCA(root->right, n1, n2);
+            if(root->data > n1 && root->data > n2) return LCA(root->left, n1, n2);
+            return root;
+        }
+        //-----------------------------------------------------------------------------------------------------
 
 };
 
