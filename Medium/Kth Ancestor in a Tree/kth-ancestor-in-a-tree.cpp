@@ -142,7 +142,7 @@ int search(Node *root,int k,int node,stack<Node*>& st){               //Total ti
         }
         else return -1;
     }
-    if(root->left==nullptr && root->right==nullptr) return -1;
+    if(root->left==nullptr && root->right==nullptr) return -1;   //to stop further recursion //No need to add leaf nodes to stack
     else st.push(root);
     
     int leftPath = search(root->left,k,node,st);
