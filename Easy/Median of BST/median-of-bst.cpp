@@ -123,6 +123,8 @@ struct Node {
 // your task is to complete the Function
 // Function should return median of the BST
 
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                    //SOLUTION
 //helper function to get the inorder of the bst
 void getInOrder(struct Node *root,vector<int>& vec){
     if(root == nullptr) return;
@@ -144,4 +146,4 @@ float findMedian(struct Node *root)
         return median/2;
     }
 }
-
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
