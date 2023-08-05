@@ -3,7 +3,7 @@
 * Basic Problems : 4
 * Easy Problems : 19
 * Hard Problems : 3
-* Medium Problems : 17
+* Medium Problems : 18
 * School Problems : 8
 
-### Total Number of Problems: 51
+### Total Number of Problems: 52
