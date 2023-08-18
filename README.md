@@ -4,9 +4,9 @@ This repository contains solution to all problems I solved on GeeksforGeeks. The
 #### Happy coding ! 
 ## Number of problems based on level of difficulty
 * Basic Problems : 5
-* Easy Problems : 28
+* Easy Problems : 29
 * Hard Problems : 4
 * Medium Problems : 20
 * School Problems : 7
 
-### Total Number of Problems: 64
+### Total Number of Problems: 65
