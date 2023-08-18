@@ -13,20 +13,22 @@ class Solution{
     public:
     vector<int> leaders(int a[], int n){
         // Code here
-        stack<int> lead;
-        vector<int> leader;
-        lead.push(a[n-1]);
-        int currLead = a[n-1];
-        for(int i = n-2;i>=0;i--){
-            if(a[i]>=currLead) lead.push(a[i]);
-            currLead = max(currLead,a[i]);
+        int m = a[n-1];
+        stack<int> st;
+        st.push(m);
+        for(int i=n-2;i>=0;i--){
+            if(a[i]>=m){
+                m = a[i];
+                st.push(m);
+            }
         }
-        while(!lead.empty()){
-            int copy = lead.top();
-            leader.push_back(copy);
-            lead.pop();
+        vector<int> leader;
+        while(!st.empty()){
+            leader.push_back(st.top());
+            st.pop();
         }
         return leader;
+        
     }
 };
 
