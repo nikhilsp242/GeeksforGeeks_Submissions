@@ -12,20 +12,22 @@ public:
 		of occurrences of x, otherwise returns 0. */
 	int count(int arr[], int n, int x) {
 	    // code here
-	   // if(x>=arr[0] && x<=arr[n-1]){
-	   //     for(int i=0;i<n;i++){
-	   //         if(arr[i]==x){
-	   //             int count = 0;
-	   //             while(arr[i]==x){
-	   //                 count++;
-	   //                 i++;
-	   //             }
-	   //             return count;
-	   //         }
-	   //     }
-	   // }
-	   // return 0;
-	   if(x>=arr[0] && x<=arr[n-1]){
+	    /*------------------------------------------------------------------------------------------
+	    if(x>=arr[0] && x<=arr[n-1]){                  //0.2 s
+	        for(int i=0;i<n;i++){
+	            if(arr[i]==x){
+	                int count = 0;
+	                while(arr[i]==x){
+	                    count++;
+	                    i++;
+	                }
+	                return count;
+	            }
+	        }
+	    }
+	    return 0;
+	    ------------------------------------------------------------------------------------------*/
+	   if(x>=arr[0] && x<=arr[n-1]){                   //0.19 s
 	       int i=0,j=n-1;
 	       while(i<=j){
 	           if(arr[i]!=x) i++;
