@@ -5,8 +5,8 @@ This repository contains solution to all problems I solved on GeeksforGeeks. The
 ## Number of problems based on level of difficulty
 * Basic Problems : 6
 * Easy Problems : 34
-* Hard Problems : 4
+* Hard Problems : 5
 * Medium Problems : 23
 * School Problems : 7
 
-### Total Number of Problems: 74
+### Total Number of Problems: 75
