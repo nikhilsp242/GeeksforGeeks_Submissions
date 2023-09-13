@@ -15,24 +15,29 @@ class Solution
     vector <int> max_of_subarrays(int *arr, int n, int k)
     {
         // your code here
-        vector<int> res;
-        deque<int> dq;
-        
-        for(int i=0;i<n;i++){
-            while(!dq.empty() && dq.front() <= i-k){
+        vector<int> result;
+        deque<int> dq; // Deque to store indices of elements
+
+        for (int i = 0; i < n; ++i) {
+            // Remove elements from the front that are out of the current window
+            while (!dq.empty() && dq.front() <= i - k) {
                 dq.pop_front();
             }
-            
-            while(!dq.empty() && arr[dq.back()] < arr[i]){
+
+            // Remove elements from the back that are smaller than the current element
+            while (!dq.empty() && arr[dq.back()] < arr[i]) {
                 dq.pop_back();
             }
-            
+
             dq.push_back(i);
-            
-            if(i >= k-1) res.push_back(arr[dq.front()]);
+
+            // Start adding maximum elements to the result once the window size reaches k
+            if (i >= k - 1) {
+                result.push_back(arr[dq.front()]);
+            }
         }
-        return res;
-        
+
+        return result;
     }
 };
 
