@@ -16,8 +16,8 @@ class Solution
     unsigned int getFirstSetBit(int n)
     {
         // Your code here
-        if(n == 0) return static_cast<unsigned int>(0);
-        return static_cast<unsigned int>(log2(n & -n) + 1);
+        if(n == 0) return (0);
+        return (log2(n & -n) + 1);
     }
 };
 
