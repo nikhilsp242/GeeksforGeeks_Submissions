@@ -11,7 +11,7 @@ class Solution{
     // n: size of array
     int equilibriumPoint(long long a[], int n) {
     
-        // Your code here
+        
         long long left=0,right=0;
         int i=0,j=n-1;
         while(i<j){
