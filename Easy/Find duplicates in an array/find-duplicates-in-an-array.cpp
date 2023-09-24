@@ -6,24 +6,19 @@ using namespace std;
 class Solution{
   public:
     vector<int> duplicates(int arr[], int n) {
-        // code here
         vector<int> dup;
-        int maxnum = arr[0];
-        for (int i = 1 ; i < n ; i++){
-            maxnum = max(maxnum,arr[i]);
+        
+        for(int i=0;i<n;i++){
+            arr[arr[i]%n] += n;
         }
-        vector<int> count(maxnum+1,0);
-        for (int i = 0 ; i < n ; i++){
-            count[arr[i]] += 1;
+        for(int i=0;i<n;i++){
+            if(arr[i]/n >= 2) dup.push_back(i);
         }
-        for(int i = 0;i<count.size();i++){
-            if(count[i]>1) dup.push_back(i);
-        }
-        if(dup.empty()) dup.push_back(-1);
+        
+        if(dup.empty()) return {-1};
         return dup;
     }
 };
-
 
 //{ Driver Code Starts.
 int main() {
