@@ -6,21 +6,24 @@ using namespace std;
 class Solution {
   public:
     double waterOverflow(int poured, int row, int glass) {
-        double triangle[32][32] = {0.0};
-        triangle[0][0] = poured;
+        vector<vector<double>> triangle;
+        triangle.push_back({poured*1.0});
         
-        for(int i = 0; i <= row; ++i) {
-            for(int j = 0; j <= i; ++j) {
-                
-                if(triangle[i][j] > 1) {
+        for(int i=0;i<=row;i++){
+            vector<double> newRow(i+2,0.0);
+            
+            for(int j=0;j<=i;j++){
+                if(triangle[i][j] > 1){
                     double half = (triangle[i][j] - 1) / 2.0;
- 
-                    triangle[i+1][j] += half;
-                    triangle[i+1][j+1] += half;
+                    newRow[j] += half;
+                    newRow[j+1] += half;
                     triangle[i][j] = 1;
                 }
             }
+            
+            triangle.push_back(newRow);
         }
+        
         return triangle[row-1][glass-1];
     }
 };
